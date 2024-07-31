@@ -23,7 +23,19 @@ function calcular(event){
 
     if(imc < 17){
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi: ' + imc + '<br/> Cuidado voce está muito abaixo do peso!'
+        resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Cuidado voce está muito abaixo do peso!'
+    }else if(imc > 17 && imc <= 18.49){
+        resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Voce está muito abaixo do peso!';
+    }else if(imc >= 18.5 && imc < 24.99){
+        resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Voce está no peso ideal!';
+    }else if(imc > 25 && imc <= 29.99){
+        resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Voce está acima do peso!';
+    }else if(imc >= 30){
+        resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<br/> Seu resultado foi: ' + imc.toFixed(2) + '<br/> Cuidado Obesidade!';
     }
 
 }
